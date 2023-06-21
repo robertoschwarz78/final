@@ -1,0 +1,40 @@
+
+
+Clever Cloud
+
+nombre de la tabla: "tabla_menu"
+
+Columnas:
+
+    codigo (int) primary key
+    tipo (char-1)
+    imagen (varchar)
+    titulo (varchar)
+    nota (varchar)
+    descripcion (varchar)
+    precio (int)
+    activo (boolean/tinyint)
+
+
+para leer el menu completo
+http://localhost:4000/menu (GET)
+
+para obtener el menu filtrado por tipo (comida, bebida, postre, otros)
+http://localhost:4000/menu/b (GET)
+
+para obtener 1 fila solamente
+http://localhost:4000/item/101 (GET)
+
+para agregar una fila
+http://localhost:4000/agregar (POST)
+en el body (x-www-form-urlencoded) agregar los keys y valores
+
+para modificar una fila
+http://localhost:4000/modificar (POST)
+en el body (x-www-form-urlencoded) agregar los keys y valores
+
+eliminar una fila
+http://localhost:4000/eliminar (GET)
+
+
+en todos los casos la api muestra la consulta SQL en la terminar para un mayor control.
